@@ -1,6 +1,6 @@
-![image](https://user-images.githubusercontent.com/70930284/100418999-99f7b780-30be-11eb-999c-dbe667ce92a6.png)
+# JavaScript数据类型
 
-# JavaScript 中的数据类型
+![image](https://user-images.githubusercontent.com/70930284/100418999-99f7b780-30be-11eb-999c-dbe667ce92a6.png)
 
 * 基本类型：String / Number / Boolean / Null /Undefined / Symbol(es6) / BingInt(es10)
 * 引用类型：Object / Array / Function
