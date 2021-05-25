@@ -2,7 +2,7 @@
 
 ![image](https://github.com/liu-fatty/library/raw/master/Images/data-types.png)
 
-- 基本类型：String / Number / Boolean / Null /Undefined / Symbol(es6) / BingInt(es10)
+- 基本类型：String / Number / Boolean / Null /Undefined / Symbol(es6) / BigInt(es10)
 - 引用类型：Object / Array / Function
 
 ## 堆和栈
