@@ -1,6 +1,6 @@
 ## 前言
 
-在上篇 [《JavaScript深入之执行上下文栈》](https://github.com/mqyqingfeng/Blog/issues/3)中讲到，当 JavaScript 代码执行一段可执行代码时，会创建对应的执行上下文。
+在上篇 [《JavaScript深入之执行上下文栈》](https://github.com/liu-fatty/library/blob/master/articles/%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/4%E3%80%81JavaScript%E6%B7%B1%E5%85%A5%E4%B9%8B%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E6%A0%88.md)中讲到，当 JavaScript 代码执行一段可执行代码时，会创建对应的执行上下文。
 
 对于每个执行上下文，都有三个重要属性：
 
@@ -14,7 +14,7 @@
 
 变量对象是与执行上下文相关的数据作用域，存储在上下文中定义的变量和函数声明。
 
-因为不同执行上下文下的变量对象稍有不同，所以我们来聊聊**全局上下文下的变量对象**和**函数上下文下的变量对象**。
+因为不同执行上下文下的变量对象稍有不同，所以我们来聊聊 **全局上下文下的变量对象** 和 **函数上下文下的变量对象** 。
 
 ## 全局上下文
 
@@ -31,13 +31,13 @@
 1. 可以通过 `this` 引用，在客户端 JavaScript 中，全局对象就是 `window` 对象。
 
 ``` js
-console.log(this);
+console.log(this); // window
 ```
 
 2. 全局对象是由 Object 构造函数实例化的一个对象。
 
 ``` js
-console.log(this instanceof Object);
+console.log(this instanceof Object); // true
 ```
 
 3. 预定了一大堆函数和属性。
@@ -68,9 +68,9 @@ console.log(this.b);
 
 ## 函数上下文
 
-在函数上下文中，我们用 活动对象 来表示 变量对象。
+在函数上下文中，我们用 **活动对象** 来表示 变量对象。
 
-活动对象和变量对象其实是一个东西，只是变量对象是规范上的或者说是引擎实现上的，不可再 JavaScript 环境中访问，只有到当进入一个执行上下文中，这个执行上下文的变量对象才会被激活，所以才叫 活动对象，而只有被激活的变量对象，也就是活动对象上的各种属性才能被访问。
+活动对象和变量对象其实是一个东西，只是变量对象是规范上的或者说是引擎实现上的，不可在 JavaScript 环境中访问，只有到当进入一个执行上下文中，这个执行上下文的变量对象才会被激活，所以才叫 活动对象，而只有被激活的变量对象，也就是活动对象上的各种属性才能被访问。
 
 活动对象是在进入函数上下文时被创建的，它通过函数的 arguments 属性初始化。arguments 属性是 Arguments 对象。
 
@@ -211,3 +211,20 @@ var foo = 1;
 会打印函数，而不是 undefined 。
 
 这是因为在进入执行上下文时，首先会处理函数声明，其次会处理变量声明，如果变量名称跟已经声明的形式参数或函数相同，则变量声明不会干扰已经存在的这类属性。
+
+在进入执行上下文后，这时候的 AO 是：
+
+``` js
+AO = {
+  arguments: {
+    length: 0
+  },
+  foo: reference to function foo(){},
+}
+```
+
+执行 console 的时候，AO的值不变，所以会打印函数。
+
+## 下一篇文章
+
+[《JavaScript深入之作用域链》](https://github.com/liu-fatty/library/blob/master/articles/%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/6%E3%80%81JavaScript%E6%B7%B1%E5%85%A5%E4%B9%8B%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE.md)

@@ -154,4 +154,4 @@ Object.prototype.\_\_proto\_\_ 的值为 null 跟 Object.prototype 没有原型�
 
 ## 下一篇文章
 
-[JavaScript 深入之词法作用域和动态作用域](https://github.com/mqyqingfeng/Blog/issues/3)
+[JavaScript 深入之词法作用域和动态作用域](https://github.com/liu-fatty/library/blob/master/articles/%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/3%E3%80%81JavaScript%E6%B7%B1%E5%85%A5%E4%B9%8B%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%8A%A8%E6%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F.md)

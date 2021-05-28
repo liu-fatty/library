@@ -9,7 +9,7 @@ javaScript 采用词法作用域，也就是静态作用域。
 
 ## 静态作用域与动态作用域
 
-因为 JavaScript 采用的是词法作用域，函数的作用域在函数定义的时候就决定了。
+因为 JavaScript 采用的是词法作用域，**函数的作用域在函数定义的时候就决定了**。
 
 而与词法作用域相对的是动态作用域，函数的作用域是在函数调用的时候才决定的。
 
@@ -74,7 +74,7 @@ checkScope()();
 
 这里直接告诉大家结果，两段代码都会打印：local scope。
 
-原因也很简单，因为 JavaScript 采用的是词法作用域，函数的作用域基于函数创建的位置。
+原因也很简单，**因为 JavaScript 采用的是词法作用域，函数的作用域基于函数创建的位置**。
 
 JavaScript 函数的执行用到了作用域链，这个作用域链是在函数定义的时候创建的。嵌套的函数 f() 定义在这个作用域链里，其中的变量 scope 一定是局部变量，不管何时何地执行函数 f()，这种绑定在执行 f() 时依然有效。
 
@@ -86,4 +86,4 @@ JavaScript 函数的执行用到了作用域链，这个作用域链是在函数
 
 ## 下一篇文章
 
-[JavaScript 深入之词法作用域和动态作用域](https://github.com/mqyqingfeng/Blog/issues/3)
+[JavaScript 深入之执行上下文栈](https://github.com/liu-fatty/library/blob/master/articles/%E6%B7%B1%E5%85%A5%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0/4%E3%80%81JavaScript%E6%B7%B1%E5%85%A5%E4%B9%8B%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E6%A0%88.md)
